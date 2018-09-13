@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Neighborhood Map</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+    <!-- Sidebar -->
+	    <nav id="sidebar">
+	       <div class="sidebar-header">
+
+	        	<form class="form-inline" role="search">
+	        		<div class="input-group">
+
+					<input type="text" class="form-control form-control-sm" placeholder="Search" name="q" data-bind="textInput: item, valueUpdate: 'afterkeydown'">
+
+					</div>
+
+	        	</form>
+
+
+	        </div>
+
+	        <ul class="list-unstyled components">
+	            
+	            <li class="active" data-bind="foreach: locationList">
+
+	            	<a href="#" data-bind="text: name, click: show"></a>
+
+	            </li>
+	                
+	        </ul>
+	    </nav>
+
+
+		<!-- Opening and closing of the sidebar -->
+		<div id="content">
+
+		    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		        <div class="container-fluid">
+
+		            <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
+		               <i class="fas fa-align-left"></i>
+
+		            </button>
+
+		            <a class="navbar-brand navbar-right">Neighborhood Map</a>
+
+		        </div>
+		   
+		    </nav>
+
+			<div id="map"></div>    
+	    
+	    </div>
+    </div>
+
+	
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<!-- KnockOut JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+
+	<!-- Locations Data File  -->
+	<script src="js/loc_data.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/myplaces.js"></script>
+
+	<!-- Google Maps API-->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgLxp_5IIkeWgdlHFMlwWgzESmFwG0u0k&v=3&callback=initMap" onerror="mapError()"></script>
+
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
