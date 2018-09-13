@@ -15,7 +15,7 @@ The Neighborhood Map is a single page application featuring a map for different 
 
 ### Getting Started
 
-You can either _Clone the repo_ ``` # git clone https://github.com/udacity/neighborhood-map.git ``` or download the zip file from https://github.com/udacity/neighborhood-map.
+You can either _Clone the repo_ ``` # git clone https://github.com/wo984c/neighborhood-map.git ``` or download the zip file from https://github.com/wo984c/neighborhood-map.
 
 The Neighborhood Map web app can be accessed by opening the index.html file in your web browser or can be hosted locally with the python's SimpleHTTPserver or the web server of your choice.
 
@@ -23,7 +23,7 @@ For the live version click _[here](#)_.
 
 ### License
 
-Multi User Blog is released under the [MIT license](https://github.com/wo984c/item-catalog/LICENSE.txt).
+Neighborhood MAP is released under the [MIT license](https://github.com/wo984c/neighborhood-map/blob/master/LICENSE.txt).
 
 ### Reference
 
